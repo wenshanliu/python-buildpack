@@ -17,8 +17,11 @@ ls $OUTPUT_DIR
 echo "Output bin dir"
 ls $OUTPUT_DIR/bin
 echo "Output share dir"
-ls $OUTPUT_DIR/share
-export PATH=$OUTPUT_DIR/bin:$OUTPUT_DIR/share:$PATH
+ls $OUTPUT_DIR/share/ghostscrip/9.19
+export PATH=$OUTPUT_DIR/bin:$PATH
 echo $PATH
+export LD_LIBRARYP_PATH=$OUTPUT_DIR/share/ghostscrip/9.19/lib:$LD_LIBRARYP_PATH
+echo $LD_LIBRARYP_PATH
+gs -h
 cd /app
 echo "Ghostscript installed"
