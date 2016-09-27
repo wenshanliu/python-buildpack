@@ -9,8 +9,8 @@ mkdir -p $OUTPUT_DIR
 tar -zxvf $ROOT_DIR/$GS_TGZ -C $INSTALL_DIR
 export PATH=$INSTALL_DIR/gs:$PATH
 echo $PATH
-export LD_LIBRARYP_PATH=$INSTALL_DIR/gs/libs:$LD_LIBRARYP_PATH
-echo $LD_LIBRARYP_PATH
+export LD_LIBRARY_PATH=$INSTALL_DIR/gs/libs:$LD_LIBRARY_PATH
+echo $LD_LIBRARY_PATH
 echo "test gs"
 gs -h
 cd /app
