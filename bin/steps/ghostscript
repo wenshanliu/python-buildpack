@@ -12,15 +12,13 @@ cd $INSTALL_DIR/ghostscript-$GS_VERSION
 ./configure --prefix=$OUTPUT_DIR
 make
 make install
-echo "Output dir"
-ls $OUTPUT_DIR
-echo "Output bin dir"
-ls $OUTPUT_DIR/bin
 echo "Output share dir"
-ls $OUTPUT_DIR/share/ghostscrip/9.19
+ls $OUTPUT_DIR/share/ghostscript
+echo "Output share 9.19 dir"
+ls $OUTPUT_DIR/share/ghostscript/9.19
 export PATH=$OUTPUT_DIR/bin:$PATH
 echo $PATH
-export LD_LIBRARYP_PATH=$OUTPUT_DIR/share/ghostscrip/9.19/lib:$LD_LIBRARYP_PATH
+export LD_LIBRARYP_PATH=$OUTPUT_DIR/share/ghostscript/9.19/lib:$LD_LIBRARYP_PATH
 echo $LD_LIBRARYP_PATH
 gs -h
 cd /app
