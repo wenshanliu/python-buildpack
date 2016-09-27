@@ -16,7 +16,9 @@ echo "Output dir"
 ls $OUTPUT_DIR
 echo "Output bin dir"
 ls $OUTPUT_DIR/bin
-export PATH=$OUTPUT_DIR/bin:$PATH
+echo "Output share dir"
+ls $OUTPUT_DIR/share
+export PATH=$OUTPUT_DIR/bin:$OUTPUT_DIR/share:$PATH
 echo $PATH
 cd /app
 echo "Ghostscript installed"
