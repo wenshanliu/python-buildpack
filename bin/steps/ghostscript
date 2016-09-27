@@ -20,6 +20,9 @@ export PATH=$OUTPUT_DIR/bin:$PATH
 echo $PATH
 export LD_LIBRARYP_PATH=$OUTPUT_DIR/share/ghostscript/9.19/lib:$LD_LIBRARYP_PATH
 echo $LD_LIBRARYP_PATH
+echo "test gs"
 gs -h
 cd /app
+echo "test gs version"
+gs --version
 echo "Ghostscript installed"
