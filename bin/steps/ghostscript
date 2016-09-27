@@ -2,7 +2,7 @@
 echo "Installing Ghostscript"
 GS_VERSION=9.19
 GS_TGZ=ghostscript-$GS_VERSION.tar.gz
-INSTALL_DIR=$BUILD_DIR/vendor/ghostscript/
+INSTALL_DIR=$BUILD_DIR/vendor/ghostscript
 mkdir -p $INSTALL_DIR
 tar -zxvf $ROOT_DIR/$GS_TGZ -C $INSTALL_DIR
 pwd
