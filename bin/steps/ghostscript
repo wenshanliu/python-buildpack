@@ -1,3 +1,16 @@
 #!/usr/bin/env bash
 echo "Installing Ghostscript"
-apt-get install ghostscript
+echo "Installing Ghostscript"
+GS_VERSION=9.19
+GS_TGZ=ghostscript-$GS_VERSION.tar.gz
+INSTALL_DIR=$BUILD_DIR/vendor/ghostscript/
+mkdir -p $INSTALL_DIR
+tar -zxvf $ROOT_DIR/$GS_TGZ -C $INSTALL_DIR
+cd $INSTALL_DIR
+cd ghostscript-$GS_VERSION
+ls
+./configure --prefix=$INSTALL_DIR
+make
+make install
+cd ..
+ls
