@@ -12,9 +12,9 @@ cd $INSTALL_DIR/ghostscript-$GS_VERSION
 ./configure --prefix=$OUTPUT_DIR
 make
 make install
-$echo "Output dir"
+echo "Output dir"
 ls $OUTPUT_DIR
-$echo "Output bin dir"
+echo "Output bin dir"
 ls $OUTPUT_DIR/bin
 export PATH=$OUTPUT_DIR/bin:$PATH
 echo $PATH
