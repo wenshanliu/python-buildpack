@@ -232,7 +232,7 @@ source $BIN_DIR/steps/gdal
 # Install dependencies with Pip.
 source $BIN_DIR/steps/pip-install
 
-# Install ghostscrips
+# Install ghostscript
 source $BIN_DIR/steps/ghostscript
 
 # Django collectstatic support.
