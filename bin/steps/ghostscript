@@ -3,15 +3,19 @@ echo "Installing Ghostscript"
 GS_VERSION=9.19
 GS_TGZ=ghostscript-$GS_VERSION.tar.gz
 INSTALL_DIR=$BUILD_DIR/vendor/ghostscript
+OUTPUT_DIR=$BUILD_DIR/vendor/installed_gs
 mkdir -p $INSTALL_DIR
 tar -zxvf $ROOT_DIR/$GS_TGZ -C $INSTALL_DIR
 pwd
 cd $INSTALL_DIR/ghostscript-$GS_VERSION
-./configure --prefix=$INSTALL_DIR
+./configure --prefix=$OUTPUT_DIR
 make
 make install
-ls $INSTALL_DIR/bin
-export PATH=$INSTALL_DIR/bin:$PATH
+$echo "Output dir"
+ls $OUTPUT_DIR
+$echo "Output bin dir"
+ls $OUTPUT_DIR/bin
+export PATH=$OUTPUT_DIR/bin:$PATH
 echo $PATH
 cd /app
 echo "Ghostscript installed"
