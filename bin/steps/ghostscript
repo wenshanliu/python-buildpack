@@ -11,5 +11,8 @@ cd $INSTALL_DIR/ghostscript-$GS_VERSION
 make
 make install
 ls $INSTALL_DIR
+ls $INSTALL_DIR/bin
+export PATH=\"$INSTALL_DIR/bin:\$PATH\"
+echo $PATH
 cd /app
 echo "Ghostscript installed"
