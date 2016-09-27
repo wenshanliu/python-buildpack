@@ -6,8 +6,10 @@ INSTALL_DIR=$BUILD_DIR/vendor/ghostscript/
 mkdir -p $INSTALL_DIR
 tar -zxvf $ROOT_DIR/$GS_TGZ -C $INSTALL_DIR
 pwd
-source $INSTALL_DIR/ghostscript-$GS_VERSION/configure --prefix=$INSTALL_DIR
+cd $INSTALL_DIR/ghostscript-$GS_VERSION
+./configure --prefix=$INSTALL_DIR
 make
 make install
 ls $INSTALL_DIR
+cd /app
 echo "Ghostscript installed"
