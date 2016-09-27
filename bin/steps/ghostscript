@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 echo "Installing Ghostscript"
-sudo apt-get install ghostscript
+apt-get install ghostscript
