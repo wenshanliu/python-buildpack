@@ -5,6 +5,7 @@ GS_TGZ=ghostscript-$GS_VERSION.tar.gz
 INSTALL_DIR=$BUILD_DIR/vendor/ghostscript
 OUTPUT_DIR=$BUILD_DIR/vendor/installed_gs
 mkdir -p $INSTALL_DIR
+mkdir -p $OUTPUT_DIR
 tar -zxvf $ROOT_DIR/$GS_TGZ -C $INSTALL_DIR
 pwd
 cd $INSTALL_DIR/ghostscript-$GS_VERSION
