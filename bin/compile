@@ -235,6 +235,9 @@ source $BIN_DIR/steps/pip-install
 # Install ghostscript
 source $BIN_DIR/steps/ghostscript
 
+# Install pdf2htmlEX
+source $BIN_DIR/steps/pdf2htmlEX
+
 # Django collectstatic support.
 sub-env $BIN_DIR/steps/collectstatic
 
