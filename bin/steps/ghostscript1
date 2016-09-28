@@ -13,8 +13,8 @@ cd $INSTALL_DIR/ghostscript-$GS_VERSION
 make
 make install
 mkdir -p $BUILD_DIR/.profile.d
-echo "export PATH=\"$INSTALL_DIR/gs:\$PATH\"" > $ENVSCRIPT
-echo "export GS_LIB=\"$INSTALL_DIR/gs/libs\"" >> $ENVSCRIPT
-echo "export LD_LIBRARY_PATH=\"$INSTALL_DIR/gs/libs:\$LD_LIBRARY_PATH\"" >> $ENVSCRIPT
+echo "export PATH=\"$OUTPUT_DIR/bin:\$PATH\"" > $ENVSCRIPT
+echo "export GS_LIB=\"$OUTPUT_DIR/share/ghostscript/9.19/lib\"" >> $ENVSCRIPT
+echo "export LD_LIBRARY_PATH=\"$OUTPUT_DIR/share/ghostscript/9.19/lib:\$LD_LIBRARY_PATH\"" >> $ENVSCRIPT
 cd /app
 echo "Ghostscript installed"
