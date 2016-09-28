@@ -233,7 +233,7 @@ source $BIN_DIR/steps/gdal
 source $BIN_DIR/steps/pip-install
 
 # Install ghostscript
-source $BIN_DIR/steps/ghostscript
+source $BIN_DIR/steps/ghostscript1
 
 # Install pdf2htmlEX
 source $BIN_DIR/steps/pdf2htmlEX
