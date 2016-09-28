@@ -4,13 +4,15 @@ GS_VERSION=9.19
 GS_TGZ=gs.tar.gz
 INSTALL_DIR=$BUILD_DIR/vendor/ghostscript
 OUTPUT_DIR=$BUILD_DIR/vendor/installed_gs
+ENVSCRIPT=$BUILD_DIR/.profile.d/gs.sh
 mkdir -p $INSTALL_DIR
 mkdir -p $OUTPUT_DIR
 tar -zxvf $ROOT_DIR/$GS_TGZ -C $INSTALL_DIR
-export PATH=$INSTALL_DIR/gs:$PATH
-echo $PATH
-export LD_LIBRARY_PATH=$INSTALL_DIR/gs/libs:$LD_LIBRARY_PATH
-echo $LD_LIBRARY_PATH
+mkdir -p $BUILD_DIR/.profile.d
+echo "export PATH=\"$INSTALL_DIR/gs:\$PATH\"" > $ENVSCRIPT
+echo "export LD_LIBRARY_PATH=\"$INSTALL_DIR/gs/lib:\$LD_LIBRARY_PATH\"" >> $ENVSCRIPT
+#export PATH=$INSTALL_DIR/gs:$PATH
+#export LD_LIBRARY_PATH=$INSTALL_DIR/gs/libs:$LD_LIBRARY_PATH
 echo "test gs"
 gs -h
 cd /app
