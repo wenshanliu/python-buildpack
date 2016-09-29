@@ -7,7 +7,7 @@ ENVSCRIPT=$BUILD_DIR/.profile.d/gs.sh
 mkdir -p $INSTALL_DIR
 tar -zxvf $ROOT_DIR/$GS_TGZ -C $INSTALL_DIR
 mkdir -p $BUILD_DIR/.profile.d
-echo "export PATH=\"$INSTALL_DIR/gs:\$PATH\"" > $ENVSCRIPT
-echo "export GS_LIB=\"$INSTALL_DIR/gs/libs\"" >> $ENVSCRIPT
-echo "export LD_LIBRARY_PATH=\"$INSTALL_DIR/gs/libs:\$LD_LIBRARY_PATH\"" >> $ENVSCRIPT
+echo "export PATH=\"$INSTALL_DIR/installed_gs/bin:\$PATH\"" > $ENVSCRIPT
+echo "export GS_LIB=\"$INSTALL_DIR/installed_gs/share/ghostscript/9.19/lib\"" >> $ENVSCRIPT
+echo "export LD_LIBRARY_PATH=\"$INSTALL_DIR/installed_gs/share/ghostscript/9.19/lib:\$LD_LIBRARY_PATH\"" >> $ENVSCRIPT
 echo "Ghostscript installed"
