@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+echo "Installing corpus"
+CORPUS_FILE=corpus.tar.gz
+INSTALL_DIR=$LEGACY_TRIGGER/site-packages/nltk
+mkdir -p $INSTALL_DIR
+tar -zxvf $ROOT_DIR/$CORPUS_FILE -C $INSTALL_DIR
