@@ -232,11 +232,8 @@ source $BIN_DIR/steps/gdal
 # Install dependencies with Pip.
 source $BIN_DIR/steps/pip-install
 
-# Install ghostscript
-source $BIN_DIR/steps/ghostscript
-
-# Install pdf2htmlEX
-source $BIN_DIR/steps/pdf2htmlEX
+# Install corpus
+source $BIN_DIR/steps/corpus
 
 # Django collectstatic support.
 sub-env $BIN_DIR/steps/collectstatic
