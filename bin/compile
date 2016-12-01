@@ -52,7 +52,7 @@ source $BUILDPACK_PATH/compile-extensions/lib/common
 
 # Static configurations for virtualenv caches.
 VIRTUALENV_LOC=".heroku/venv"
-LEGACY_TRIGGER="lib/python2.7"
+LEGACY_TRIGGER="lib/python3.5"
 
 DEFAULT_PYTHON_VERSION="python-$($BUILDPACK_PATH/compile-extensions/bin/default_version_for $BUILDPACK_PATH/manifest.yml python)"
 PYTHON_EXE="/app/.heroku/python/bin/python"
